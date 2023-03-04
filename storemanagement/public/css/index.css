@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 2px 16px;
+    
+
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 400px;
+    
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    margin-top: 2rem;
+  }
+  
+  .detail {
+    color: grey;
+    height: 10%;
+
+    font-size: 18px;
+    text-align: left;
+    margin-left: 1rem;
+  }
+  
+  .card button {
+    border: none;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+   
+    
+  }
+  .tagbutton{
+    margin-top: 0.5rem;
+  }
+  
+  .card button:hover {
+    opacity: 0.7;
+  }
+  .button:link, .button:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid green;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button:hover, a:active {
+    background-color: green;
+    color: white;
+  }

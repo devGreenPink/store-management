@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เพิ่มข้อมูลสินค้า</title>
+    <link rel="stylesheet" href="/css/insertForm.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    <p  align="right" class="log">
+        <a   href="/log-out">ออกจากระบบ</a>
+    </p>
+    <div>
+        
+    <form method="POST" action="/insert" enctype="multipart/form-data">
+
+        <label for="name">ชื่อสินค้า</label>
+        <input type="text"  name="name" placeholder="ชื่อสินค้า..">
+
+
+        <label for="price">ราคาสินค้า</label>
+        <input type="number"  name="price" placeholder="ราคา..">
+
+        <label for="image">รูปภาพ</label>
+        <input type="file"  name="image">
+        
+        <label for="description">รูปภาพ</label>
+        <textarea  cols="30" rows="4" name="description"></textarea>
+
+        
+        <input type="submit" value="Submit">
+    </form>
+    </div>
+    
+</body>
+</html>

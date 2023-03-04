@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>แบบฟอร์มแก้ไขข้อมูล</title>
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="/css/edit.css">
+    </head>
+    <body>
+      <%- include('navbar') %>
+      <div>
+        <form method="POST" action="/update" >
+
+            <input type="hidden" name="update_id" value="<%= product._id%>">
+    
+            <label for="name">ชื่อสินค้า</label>
+            <input type="text"  name="name" value="<%= product.name%>">
+    
+    
+            <label for="price">ราคาสินค้า</label>
+            <input type="number"  name="price" value="<%= product.price%>" >
+    
+            
+            
+            <label for="description">คำอธิบาย</label>
+            <textarea  cols="30" rows="4" name="description"><%= product.description%></textarea>
+    
+            
+            <input type="submit" value="Submit">
+        </form>
+        </div>
+        
+                    
+    </body>
+</html>

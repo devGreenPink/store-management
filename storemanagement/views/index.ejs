@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าหลัก</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <%- include('navbar') %>
+
+    <div class="container">
+        <% Object.values(products).forEach(function(item){%>
+            <div class="card">
+                <img src="./images/products/<%=item.image%>" alt="<%=item.name%>" style="width:100%;height:50%;">
+                <h1><%=item.name%></h1>
+                <p class="detail">โลละ <%=item.price%> บาท</p>
+                <p class="detail"><%=item.description%>.</p>
+                <p class="tagbutton"><a class="button" href="<%=item.id%>">แสดงข้อมูล</a></p>
+              </div>
+        <% }) %>
+    </div>
+    
+</body>
+</html>

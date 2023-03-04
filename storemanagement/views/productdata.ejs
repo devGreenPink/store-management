@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลสินค้า</title>
+    
+        <link rel="stylesheet" href="css/navbar.css">
+        <link rel="stylesheet" href="css/productdata.css">
+    </head>
+<body>
+    <%- include('navbar') %>
+       <% if(product){%>
+
+        <div class="container">
+            <div class="card">  
+                <img src="images/products/<%= product.image%>" alt="<%= product.name%>"  width="500px" height="500px"/>
+                <h3 align="center"><%= product.name%></h3>
+                <h4 class="detail">ราคา <%= product.price%> บาท</h4>
+                <h4 class="detail">รายละเอียดสินค้า</h4>
+                <p class="detail"><%= product.description%></p>
+            </div>
+        </div>
+
+        <% } %>
+    
+</body>
+</html>

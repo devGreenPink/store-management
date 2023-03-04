@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+    <%- include('navbar') %>
+    
+        <form action="/admin" method="POST">
+            <input type="hidden" name="route"value="<%= route %>">
+            <div class="imgcontainer">
+                <img src="https://cdn-icons-png.flaticon.com/512/7141/7141726.png" alt="Avatar" class="avatar" >
+              </div>
+            
+              <div class="container">
+                <label for="username"><b>Username</b></label>
+                <input type="text" placeholder="Enter Username" name="username" required>
+            
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                    
+                <button type="submit">Login</button>
+              </div>
+        </form>
+
+        
+  
+
+
+
+
+    
+</body>
+</html>
